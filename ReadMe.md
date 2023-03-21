@@ -1,16 +1,16 @@
-# Taipy to create your Web appsin Python
+# Taipy to create your Web apps in Python
 
-Taipy is an Open-Source user-friendly Python package tool that provides an easy and intuitive way for users to create graphical user interfaces. With Taipy, you don't need advanced knowledge of web design to create beautiful and interactive interfaces. Taipy uses a simple augmented Markdown syntax to help you create web pages with custom features and functionality.
+[Taipy](https://www.taipy.io/) is an **Open-Source** user-friendly Python package tool that provides an easy and intuitive way for users to create graphical user interfaces. With Taipy, you don't need advanced knowledge of web design to create beautiful and interactive interfaces. Taipy uses a simple augmented Markdown syntax to help you create web pages with custom features and functionality.
 
-In addition to its GUI capabilities, Taipy also provides a powerful pipeline orchestration package called Taipy Core. Taipy Gui & Core make it possible to handle the frontend and backend of a complete application in the same tool. It simplifies the process of creating and managing complex data pipelines by providing intuitive DAG modeling, smart scheduling, powerful data caching, and scenario enabled pipelines. This makes Python development more accessible and efficient for users of all levels of expertise.
+In addition to its GUI capabilities, Taipy provides a powerful pipeline orchestration package called **Taipy Core**. Taipy Gui & Core make it possible to handle the front end and back end of a complete application within the same tool. It simplifies creating and managing **complex data pipelines** by providing intuitive DAG modeling, intelligent scheduling, robust data caching, and scenario-enabled pipelines. This makes Python development more accessible and efficient for users of all levels of expertise.
 
-Overall, Taipy is a complete solution for businesses and individuals who want to streamline their Python development process and create professional-looking interfaces without the need for advanced web design skills.
+Overall, Taipy is a complete solution for businesses and individuals who want to streamline their Python development process and create professional-looking interfaces without needing advanced web design skills.
 
 For the following steps, you can clone this [repository](https://github.com/FlorianJacta/OVH_Tutorial) to deploy your first Taipy app on OVH.
 
 # Deploying a Taipy app on OVH
 
-Deploying a Taipy app on OVH using Docker Hub and OVH is a great way to ensure your app is accessible easily. With Docker Hub, you can store and manage your app's docker, while OVH provides a secure and reliable hosting environment.
+To deploy your Taipy app, combine Docker Hub and AI Deploy from OVH. This process will allow you to make your app accessible within minutes. With Docker Hub, you can store and manage your app's docker, while OVH provides a secure and reliable hosting environment.
 
 In this article, we'll take you through deploying a Taipy app on OVH using Docker Hub.
 
@@ -23,7 +23,7 @@ When building a Docker for your Taipy app, you must provide a _Dockerfile_ and a
 The _Dockerfile_ is a text file that describes the steps required to build a Docker image for your app. You can create a new file in your project directory and name it "Dockerfile".
  
  ```
-# Start from official Python image
+# Start from the official Python image
 FROM python:3.9
 
 
@@ -38,7 +38,7 @@ ADD requirements.txt /workspace/requirements.txt
 RUN pip install -r requirements.txt
 
 
-# Add your scripts to Docker image. Note : best practice is to put data outside, such as S3 storage
+# Add your scripts to the Docker image. Note: best practice is to put data outside, such as S3 storage
 ADD main.py /workspace/
 ADD dataset.csv /workspace/
 
@@ -48,12 +48,12 @@ RUN chown -R 42420:42420 /workspace
 ENV HOME=/workspace
 
 
-# Run you script
+# Run your script
 CMD [ "python3" , "/workspace/main.py" ]
 ```
 
 2. Create a requirements.txt file:
-The _requirements.txt_ file lists all the dependencies required by your Taipy app. You can create a new file in your project directory and name it "requirements.txt". You can then list all the dependencies, one per line. For example:
+The _requirements.txt_ file lists all the dependencies your Taipy app requires. You can create a new file in your project directory and name it "requirements.txt". You can then list all the dependencies, one per line. For example:
 
 ```
 taipy
@@ -62,7 +62,7 @@ statsmodels
 pandas
 ```
 
-With these steps, you should now have a _Dockerfile_ and a _requirements.txt_ file in your Taipy app project. You can then use these files to build a Docker for your app and deploy it to OVH using Docker Hub.
+With these steps, you should have a _Dockerfile_ and a _requirements.txt_ file in your Taipy app project. Using Docker Hub, you can then use these files to build a Docker for your app and deploy it to OVH.
 
 ## Step 2: Create a Docker Hub account
 
@@ -70,7 +70,7 @@ If you still need a Docker Hub account, head to https://hub.docker.com/ and crea
 
 ## Step 3: Build your Taipy app's Docker image
 
-To deploy your Taipy app on OVH, you need to first build a Docker image for your app. It will include all the necessary dependencies and configurations for your app.
+To deploy your Taipy app on OVH, you must  build a Docker image for your app. It will include all the necessary dependencies and configurations for your app.
 
 Assuming you have your Dockerfile ready, you can build your image using the following command:
 
@@ -101,7 +101,7 @@ The next step is to create an account on OVH Cloud if not done yet. AI Deploy wi
 - Configure your app
 - Review
 
-At the end of this step, OVH will use your Docker Hub image to create the app and deploy it.
+At the end of this step, OVH will use your Docker Hub image to create and deploy the app.
 
 ## Step 6: Test your app
 
