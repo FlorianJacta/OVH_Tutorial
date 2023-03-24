@@ -10,7 +10,7 @@ For the following steps, you can clone this [repository](https://github.com/Flor
 
 # Deploying a Taipy app on OVH
 
-To deploy your Taipy app, combine Docker Hub and AI Deploy from OVH. This process will allow you to make your app accessible within minutes. With Docker Hub, you can store and manage your app's docker, while OVH provides a secure and reliable hosting environment.
+To deploy your Taipy app, you only need Docker Hub and AI Deploy from OVH. This process will allow you to make your app accessible within minutes. With Docker Hub, you can store and manage your app's docker, while OVH provides a secure and reliable hosting environment.
 
 In this article, we'll take you through deploying a Taipy app on OVH using Docker Hub.
 
@@ -70,7 +70,7 @@ If you still need a Docker Hub account, head to https://hub.docker.com/ and crea
 
 ## Step 3: Build your Taipy app's Docker image
 
-To deploy your Taipy app on OVH, you must  build a Docker image for your app. It will include all the necessary dependencies and configurations for your app.
+To deploy your Taipy app on OVH, you must build a Docker image for your app. It will include all the necessary dependencies and configurations for your app.
 
 Assuming you have your Dockerfile ready, you can build your image using the following command:
 
@@ -93,9 +93,9 @@ Replace `<your-dockerhub-username>` with your Docker Hub account name and `<your
 
 ## Step 5: Deploy your app using AI Deploy
 
-The next step is to create an account on OVH Cloud if not done yet. AI Deploy will be used to host your app. You can find this service going to Public Cloud. Then, you click on "Deploy an app". You will have to choose:
+The next step is to create an account on OVH Cloud if not done yet. AI Deploy will be used to host your app. You can find this service going to Public Cloud. Then, click on "Deploy an app". You will have to choose:
 - Location
-- Application to deploy
+- Application to deploy: put the path to the Docker Hub image
 - Resources
 - Attach a container
 - Configure your app
@@ -106,3 +106,7 @@ At the end of this step, OVH will use your Docker Hub image to create and deploy
 ## Step 6: Test your app
 
 Test your app on OVH by accessing its URL.
+
+## To conclude
+
+Taipy is an open-source Python package tool that simplifies the creation of graphical user interfaces without requiring advanced web design skills. It also provides a pipeline orchestration package, Taipy Core, that simplifies creating and managing complex data pipelines. By following a few steps, users can deploy their Taipy apps on OVH using Docker Hub and AI Deploy. Overall, Taipy is an ideal solution for businesses and individuals looking to streamline their Python development process and create professional-looking interfaces.
