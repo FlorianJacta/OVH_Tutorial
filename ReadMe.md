@@ -56,10 +56,9 @@ CMD [ "python3" , "/workspace/main.py" ]
 The _requirements.txt_ file lists all the dependencies your Taipy app requires. You can create a new file in your project directory and name it "requirements.txt". You can then list all the dependencies, one per line. For example:
 
 ```
-taipy
-scikit-learn
-statsmodels
-pandas
+taipy==2.2
+yfinance==0.1.96
+prophet==1.1.2
 ```
 
 With these steps, you should have a _Dockerfile_ and a _requirements.txt_ file in your Taipy app project. Using Docker Hub, you can then use these files to build a Docker for your app and deploy it to OVH.
